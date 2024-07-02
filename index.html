@@ -41,9 +41,11 @@
       motor01.power(100); // 25
       motor02.power(100);
 
-      button.onchange = function () {
-
-        eyedetection();
+      button.onchange = function (pressed) {
+        if(pressed) {
+          eyedetection();
+        }
+        
       };
 
       obniz.display.clear();
